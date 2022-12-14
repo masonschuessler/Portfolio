@@ -1,0 +1,42 @@
+.app {
+  display: flex;
+  max-width: 400px;
+  margin: auto;
+  margin-top: 90px;
+}
+
+.display {
+  height: 60px;
+  width: 100%;
+  background-color: aqua;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+.result {
+  font-size: 30px;
+  height: 40px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.result span {
+  font-size: 15px;
+}
+
+.operators {
+  display:flex;
+}
+
+.digits {
+  display: block;
+}
+
+button {
+  width: 25%;
+  height: 80px;
+  font-size: 30px;
+  border-radius: .5px;
+}
