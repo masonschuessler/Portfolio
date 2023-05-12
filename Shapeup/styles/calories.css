@@ -1,0 +1,176 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: sans-serif;
+    width: 900px;
+    border: .25em solid steelblue;
+    margin: auto;
+    box-shadow: 0em 2em 2em 2em black;
+}
+header img {
+    float: left;
+    padding-left: 2em;
+}
+main {
+}
+header {
+    text-indent: 2em;
+    border-bottom: .25em solid steelblue;
+    background-image: linear-gradient(white, lightsteelblue);
+    padding-bottom: 2em;
+    margin-top: -1em;
+}
+header h1 {
+    color: steelblue;
+    font-style: italic;
+    text-shadow: 2px 2px steelblue;
+    font-size: 2.5em;
+}
+header h2 {
+    padding: 0;
+    margin-top: -.5em;
+    font-size: 1.5em;
+    font-weight: bolder;
+}
+#nav_menu ul {
+    list-style: none;
+    position: relative;
+    background-color: steelblue;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+#nav_menu ul li {
+    float: left;
+    width: 20%;
+    background-color: steelblue;
+}
+#nav_menu ul li:hover {
+    background-color: lightsteelblue;
+    display: block;
+}
+#nav_menu ul li:hover > ul {
+    display: block;
+    width: 20%;
+}
+#nav_menu ul li:active {
+    background-color: steelblue;
+}
+#nav_menu ul li a {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+#nav_menu ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+}
+#nav_menu ul ul li {
+    float: none;
+    width: 100%;
+}
+#nav_menu ul ul li:hover > ul {
+    display: inline-block;
+    top: 100%;
+}
+#nav_menu > ul::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+#nav_menu .current {
+    color: black;
+}
+section h2 {
+    padding: .5em 0;
+    color: maroon;
+}
+.relief_tips {
+    float: right;
+    width: 30%;
+    height: 30%;
+    border: 2px solid black;
+}
+section p {
+    width: 70%;
+}
+blockquote {
+    padding: 1em 2.5em;
+}
+main h2 {
+    font-size: 1.5em;
+}
+h3 {
+    padding: .5em 0;
+}
+.tips {
+    color: grey;
+}
+a.section:link, a.section:visited {
+    color: maroon;
+}
+a.section:hover, a.section:focus {
+        color: steelblue;    
+}
+aside {
+    float: left;
+    width: 245px;
+    padding: 1em 1em;
+}
+aside ul li a {
+    text-decoration: none;
+}
+a.side_nav:link, a.side_nav:visited {
+    color: steelblue;
+    font-weight: bold;
+}
+a.side_nav:hover, a.side_nav:focus {
+    color: maroon;
+}
+aside h2 {
+    padding: .5em 0;
+    color: maroon;
+}
+ul {
+    line-height: 1.5em;
+    padding: .5em 0 0 1em;
+}
+figure {
+    width: 100%;
+}
+table {
+    width: 70%;
+}
+th {
+    vertical-align: baseline;
+    text-align: left;
+}
+td {
+    padding: 0 0 .5em 1em;
+}
+.top {
+    color: maroon;
+    padding-bottom: .25em;
+}
+figcaption {
+    font-size: 2em;
+    text-align: center;
+    font-weight: bolder;
+    padding-bottom: 1em;
+}
+.tfooter {
+    font-weight: normal;
+    padding-top: 2em;
+}
+footer {
+    font-size: 1em;
+    text-align: center;
+    border-top: .25em solid steelblue;
+    background-color: steelblue;
+    color: white;
+    padding: 1em 0;
+    clear: both;
+}

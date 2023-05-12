@@ -1,0 +1,253 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+    font-family: sans-serif;
+    border: .25em solid steelblue;
+    box-shadow: 0em 2em 2em 2em black;
+    display: grid;
+    grid-template: repeat(4, auto) / 1fr;
+    grid-gap: 1.5em;
+    grid-template-areas: 
+        "head"
+        "navi"
+        "main"
+        "foot";
+}
+header img {
+    float: left;
+    padding-left: 2em;
+    min-width: 70px;
+    max-width: 100%;
+    width: 20%;
+}
+main {
+    margin: 0 2%;
+    grid-area: main;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto auto;
+    grid-gap: 2%;
+    grid-template-areas: 
+            "arti"
+            "side";
+}
+header {
+    grid-area: head;
+}
+header h1 {
+    color: steelblue;
+    font-style: italic;
+    text-shadow: 2px 2px steelblue;
+    font-size: 2.5em;
+}
+header h2 {
+    font-size: 1.5em;
+    font-weight: bolder;
+}
+#nav_menu ul {
+    list-style: none;
+    position: relative;
+    background-color: steelblue;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+#nav_menu ul li {
+    float: left;
+    width: 20%;
+    background-color: steelblue;
+}
+#nav_menu ul li:hover {
+    background-color: lightsteelblue;
+    display: block;
+}
+#nav_menu ul li:hover > ul {
+    display: block;
+    width: 20%;
+}
+#nav_menu ul li:active {
+    background-color: steelblue;
+}
+#nav_menu ul li a {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+#nav_menu ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+}
+#nav_menu ul ul li {
+    float: none;
+    width: 100%;
+}
+#nav_menu ul ul li:hover > ul {
+    display: inline-block;
+    top: 100%;
+}
+#nav_menu > ul::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+#nav_menu .current {
+    color: black;
+}
+section h2 {
+    padding-bottom: .5em;
+}
+blockquote {
+    padding: 1em 2.5em;
+}
+main h2 {
+    font-size: 1.5em;
+}
+h3 {
+    padding: .5em 0;
+}
+section h3 {
+    color: maroon;
+}
+a.section:link, a.section:visited {
+    color: maroon;
+}
+a.section:hover, a.section:focus {
+        color: steelblue;    
+}
+aside {
+   grid-area: side;
+   grid-column-start: 1;
+   grid-column-end: 2;
+   grid-row-start: 1;
+}
+aside ul li a {
+    text-decoration: none;
+}
+a.side_nav:link, a.side_nav:visited {
+    color: steelblue;
+    font-weight: bold;
+}
+a.side_nav:hover, a.side_nav:focus {
+    color: maroon;
+}
+aside h2 {
+    padding: .5em 0;
+    color: maroon;
+}
+section {
+    grid-area: arti;
+    grid-row: 1/4;
+    grid-column: sec-start/ sec-end;
+}
+ul {
+    line-height: 1.5em;
+    padding: .5em 0 0 1em;
+}
+footer {
+    font-size: 1em;
+    text-align: center;
+    border-top: .25em solid steelblue;
+    background-color: steelblue;
+    color: white;
+    padding: 1em 0;
+    clear: both;
+    grid-area: foot;
+}
+#mobile_menu {
+    display: none;
+}
+@media (max-width: 900px) {
+    body {
+        box-shadow: none;
+        font-size: 90%;
+    }
+}
+@media (max-width: 767px) {
+    #nav_menu {
+		display: none;
+	}
+    #mobile_menu {
+		display: block;
+	}
+	.slicknav_menu {}
+    header h1 {
+        font-size: 150%;
+        grid-column: 2/5;
+        padding: 0;
+    }
+    header h2 {
+        grid-column: 2/5;
+        margin: 0;
+        font-size: 120%;
+    }
+    header {
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-template-columns: 80px 1fr 1fr auto 1fr;
+        justify-items: left;
+    }
+    header img {
+        width: 70%;
+        grid-column: 1/1;
+        padding: 0;
+    }
+    body {
+        grid-gap: 0;
+    }
+    main {
+        width: 90%;
+        grid-template: auto  / auto;
+        grid-gap: 2%;
+        grid-template-areas: "side"
+            "arti";
+    }
+    aside {
+        float: none;
+        grid-area: side;
+        grid-row: 4/4;
+        padding-bottom: 5em;
+    }
+    section {
+        grid-area: arti;
+        width: 90%;
+    }
+}
+@media (max-width: 479px) {
+    header h1 {
+        font-size: 170%;
+        padding: 0;
+        grid-column: 2/5;
+    }   
+    header h2 {
+        font-size: 100%;
+        padding: 0;
+        grid-column: 2/5;
+    }
+    header {
+        display: grid;
+        grid-template-columns: 80px 1fr 1fr auto 1fr;
+        align-content: center;
+    }
+    header img {
+        width: 60%;
+        height: 100%;
+        grid-column: 1/2;
+        padding: 0;
+        margin: 0;
+        justify-self: center;
+        align-self: center;
+    }
+    section p {
+        font-size: 85%;
+    }
+    aside {
+        width: auto;
+    }
+}

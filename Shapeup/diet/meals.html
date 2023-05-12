@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/favicon.ico">
+    <title>Shape Up!</title>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/meals.css">
+</head>
+<body>
+    <header>
+        <a href="../index.html"><img src="../images/shape_up_logo.png" alt=""></a>
+        <h1>Shape Up!</h1>
+        <h2>Find the best fit for you</h2>
+    </header>
+    <nav id="nav_menu">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../strength/index.html">Strength Training</a></li>
+            <li><a href="../cardio/index.html">Cardio Exercises</a></li>
+            <li><a href="#">Stress Relief</a>
+                <ul>
+                    <li><a href="../stress/index.html">What is Stress?</a></li>
+                    <li><a href="../stress/tips.html">5 Helpful Tips</a></li>
+                    <li><a href="../stress/meditate.html">Meditation</a></li>
+                    <li><a href="../stress/vipassana.html">Vipassana</a></li>
+                </ul></li>
+            <li><a href="#" class="current">Healthy Diets</a>
+                <ul>
+                    <li><a href="index.html">Why a Healthy Diet?</a></li>
+                    <li><a href="meals.html" class="current">Plan Your Meals</a></li>
+                    <li><a href="calories.html">Count Your Calories</a></li>
+                    <li><a href="diet/bmi.html">Calculate Your BMI</a></li>
+                </ul></li>
+        </ul>
+    </nav>
+    <aside>
+        <h2>Additional resources</h2>
+   <ul>
+       <li><a class="side_nav" href="https://www.cdc.gov/physicalactivity/basics/pa-health/index.htm" target="_blank">Physical activity and health</a></li>
+       <li><a class="side_nav" href="https://www.bupa.co.uk/newsroom/ourviews/waking-up-stretching" target="_blank">Stretching exercises</a></li>
+       <li><a class="side_nav" href="https://www.webmd.com/fitness-exercise/ss/slideshow-start-strength-training" target="_blank">Strength training</a></li>
+       <li><a class="side_nav" href="https://www.ucdenver.edu/docs/librariesprovider65/clinical-services/sports-medicine/training-for-cardiovascular-fitness.pdf?sfvrsn=a0345bb9_2" target="_blank">Cardiovascular training</a></li>
+       <li><a class="side_nav" href="https://www.self.com/gallery/power-yoga-workout" target="_blank">Yoga workout</a></li>
+   </ul></aside> 
+    <main> 
+		<section>
+			<form class="form" action="meal_request.html"
+				  method="get"
+				  id="meal_request">
+				<fieldset>
+					<legend><strong>Tell us about yourself</strong></legend>
+					<label for="fullname" class="yourself">* Full name</label>
+					<input type="text" name="fullname" id="fullname"
+					autofocus required><br>
+					<label for="email" class="yourself">* E-mail</label>
+					<input type="email" name="email" id="email" required><br>
+					<label for="gender" class="yourself">Gender</label>
+					<select name="gender" id="gender">
+						<option value="">Select your gender</option>
+						<option value="M">Male</option>
+						<option value="F">Female</option>
+					</select><br>
+					<label for="height" class="yourself">Height</label>
+					<input type="text" name="height" id="height" 
+					placeholder="Example 5ft 6ft"><br>
+					<label for="weight" class="yourself">Weight</label>
+					<input type="text" name="weight" id="weight"
+					placeholder="Example 145lbs"><br>
+					<label for="age" class="yourself">Age</label>
+					<select name="age" id="age">
+						<option value="">Select your age</option>
+						<option value="5-20">5 - 20</option>
+						<option value="21-35">21 - 35</option>
+						<option value="35-54">35 - 54</option>
+						<option value="55+">55+</option>
+					</select>
+				</fieldset>
+				<fieldset>
+					<legend><strong>Lifestyle and goals</strong></legend>
+					<label for="lifestyle">Which current matches your present lifestyle?</label><br>
+					<input type="radio"
+						   name="lifestyle"
+						   value="Active"
+						   class="radio">Active
+					<input type="radio"
+						   name="lifestyle"
+						   value="Moderate"
+						   class="radio">Moderate
+					<input type="radio"
+						   name="lifestyle"
+						   value="sedentary"
+						   class="radio">Sedentary<br>
+					<label for="activity">Are you planning to increase your activity
+						level as you change your diet?
+					</label><br>
+					<input type="radio"
+						   name="activity"
+						   value="yes"
+						   class="radio">Yes
+					<input type="radio"
+						   name="activity"
+						   value="no"
+						   class="radio">No<br>
+					<label for="wgoals">What are you weight goals?</label><br>
+					<input type="checkbox" 
+					name="gainweight" 
+					value="gainweight"
+					class="checkbox">Gain weight
+					<input type="checkbox"
+					name="loseweight"
+					value="loseweight"
+					class="checkbox">Lose weight
+					<input type="checkbox"
+					name="maintain"
+					value="maintain"
+					class="checkbox">Maintain current weight
+				</fieldset>
+				<fieldset>
+					<legend><strong>Food preferences and restrictions</strong></legend>
+					<label for="fpr">Do you have any dietary restrictions? (select all that apply)</label><br>
+					<input type="checkbox"
+					name="vege"
+					value="vege"
+					class="checkbox">Vegetarian
+					<input type="checkbox"
+					name="gfree"
+					value="gfree"
+					class="checkbox">Gluten-free
+					<input type="checkbox"
+					name="kosher"
+					value="kosher"
+					class="checkbox">Kosher
+					<input type="checkbox"
+					name="lsalt"
+					value="lsalt"
+					class="checkbox">Low salt
+					<input type="checkbox"
+					name="other"
+					value="other"
+					class="checkbox">Other, please explain<br>
+					<textarea name="other" id="other" cols="50" rows="10"></textarea>
+				</fieldset>
+				<fieldset>
+					<legend><strong>Comments:</strong></legend>
+					<label for="comments">Include and additional information
+						that will help us develop a custom menu designed to 
+						match your lifestyle and your goals.
+					</label>
+					<textarea name="comments" id="comments" cols="50" rows="10"></textarea>
+				</fieldset>
+				<fieldset>
+					<legend><strong>Process your information</strong></legend>
+					<div class="contactButton">
+						<input type="submit"
+							   id="join"
+							   name="join"
+							   value="Submit Now">&nbsp;&nbsp;&nbsp;&nbsp;
+						<input type="reset"
+							   id="reset"
+							   name="reset"
+							   value="Start over">
+					</div>
+				</fieldset>
+			</form>
+       </section>     
+    </main>
+    <footer>
+        &copy; 2019 Shape Up!
+    </footer>
+
+</body>
+</html>

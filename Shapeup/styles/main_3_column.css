@@ -1,0 +1,94 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: sans-serif;
+    width: 1200px;
+    border: .25em solid steelblue;
+    margin: auto;
+    box-shadow: 0em 2em 2em 2em black;
+}
+header img {
+    float: left;
+    padding-left: 2em;
+}
+main {
+    padding: 2em .5em;
+    width: 600px;
+    float: left;
+}
+header {
+    text-indent: 2em;
+    border-bottom: .25em solid steelblue;
+    background-image: linear-gradient(white, lightsteelblue);
+    padding-bottom: 2em;
+    margin-top: -1em;
+}
+header h1 {
+    color: steelblue;
+    font-style: italic;
+    text-shadow: 2px 2px steelblue;
+    font-size: 2.5em;
+}
+header h2 {
+    padding: 0;
+    margin-top: -.5em;
+    font-size: 1.5em;
+    font-weight: bolder;
+}
+section h2 {
+    padding-bottom: .5em;
+}
+blockquote {
+    padding: 1em 2.5em;
+}
+main h2 {
+    font-size: 1.5em;
+}
+h3 {
+    padding: .5em 0;
+}
+a.section:link, a.section:visited {
+    color: maroon;
+}
+a.section:hover, a.section:focus {
+        color: steelblue;    
+}
+#left_nav {
+    float: left;
+    width: 255px;
+    padding: 1em 1em;
+}
+a.side_nav:link, a.side_nav:visited {
+    color: steelblue;
+    font-weight: bold;
+}
+a.side_nav:hover, a.side_nav:focus {
+    color: maroon;
+}
+#left_nav h2 {
+    padding: .5em 0;
+    color: maroon;
+}
+ul {
+    line-height: 1.5em;
+    padding: .5em 2.5em;
+}
+#right_nav {
+    float: right;
+    width: 255px;
+    padding: 1em 1.5em 1em 0;
+}
+#right_nav h2 {
+    color: maroon;
+}
+footer {
+    font-size: 1em;
+    text-align: center;
+    border-top: .25em solid steelblue;
+    background-color: steelblue;
+    color: white;
+    padding: 1em 0;
+    clear: both;
+}
