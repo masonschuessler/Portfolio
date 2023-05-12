@@ -1,0 +1,27 @@
+<%- include('partials/head') %>
+
+<%- include('partials/navbar') %>
+
+<div class="container">
+    <h1 class="text-center p-2">Todo List</h1>
+    <form action="/e/todo" method="patch" class="row g-3 mb-4">
+        <div class="col-auto">
+            <input type="text" name="todo" class="form-control lg" placeholder="Update Task">
+        </div>
+        <div class="col-auto">
+            <input type="submit" value="Add Todo" class="btn btn-success btn-md text-center">
+        </div>
+    </form>
+    <ul class="list-group my-auto">
+        <% todo.forEach(todos => { %>
+            <li class="list-group-item list-group-item-info mb-1"><%= todos.todo %>
+            <div class="d-grid d-sm-flex justify-content-sm-end my-auto">
+            <a class="btn btn-danger btn-sm col-2"
+                href="/delete/todo/<%= todos._id %>">Delete</a>
+            <a class="btn btn-primary btn-sm col-2"
+                href="/edit/todo/<%= todos._id %>">Edit</a>    </div></li>
+        <% }) %>
+    </ul>
+</div>
+
+<%- include('partials/foot') %>
